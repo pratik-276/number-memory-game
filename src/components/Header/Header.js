@@ -51,7 +51,7 @@ class Header extends Component {
                         <a href="/"><i className="material-icons">dashboard</i>Home</a>
                     </li>
                     <li>
-                        <a href="/leaderboard">LeaderBoard</a>
+                        <a href="/leaderboard"><i className="material-icons">assessment</i>LeaderBoard</a>
                     </li>
                 </ul>
             </div>
