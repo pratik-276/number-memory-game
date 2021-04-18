@@ -14,7 +14,9 @@ class Home extends Component {
     componentDidMount(){
         M.FormSelect.init(document.querySelectorAll('select'), {});
         let modal = document.querySelectorAll('.modal');
-        M.Modal.init(modal, {});
+        M.Modal.init(modal, {
+            onCloseStart: this.saveResult
+        });
     }
     inputChange = (event) => {
         this.setState({inputSum: event.target.value});
@@ -133,7 +135,7 @@ class Home extends Component {
                         textAlign: "center",
                         marginBottom: "20px"
                     }}>
-                        <button className="btn-large red white-text modal-action modal-close" onClick={this.saveResult}>Go Back</button>
+                        <button className="btn-large green white-text modal-action modal-close">Save Score</button>
                     </div>
                 </div>
             </div>

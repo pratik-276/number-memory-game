@@ -10,7 +10,9 @@ class LeaderBoard extends Component {
     }
     render() { 
         return (
-            <div class="container">
+            <div className="container" style={{
+                paddingBottom: "20px"
+            }}>
                 <ul className="collection with-header">
                     <li className="collection-header center"><h3>LeaderBoard</h3></li>
                 </ul>
