@@ -74,17 +74,18 @@ class Home extends Component {
     gameContinue = () => {
         let content = document.getElementById("game-body");
         content.style.fontSize = "30px";
-        content.innerHTML = "Please Wait while the game is cooking...";
+        content.innerHTML = "Rules: Submit the sum of the numbers shown. <br> Total Questions:10 <br><br> 5 seconds given to submit each answer <br><br> Starting soon...";
         let myInterval = setInterval(() => {
             content.style.fontSize = "300px";
             if (this.state.questions >= 10) {
                 clearInterval(myInterval);
                 this.finalResult();
             } else {
+                this.setState({inputSum: "", sum: 0});
                 this.numbers();
                 this.setState({questions: this.state.questions+1});
             }
-        }, 10000);
+        }, 12000);
     }
     gameStart = () => {
         document.getElementById("home-screen").style.display = "none";
