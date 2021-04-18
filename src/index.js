@@ -12,7 +12,7 @@ import axios from 'axios';
 import reducer from './store/reducers/leaderboard';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-axios.defaults.baseURL = "https://food-ordering-app-d8236-default-rtdb.firebaseio.com/";
+axios.defaults.baseURL = "https://number-memory-game-f2628-default-rtdb.firebaseio.com/";
 
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 

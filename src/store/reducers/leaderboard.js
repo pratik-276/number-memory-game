@@ -11,6 +11,10 @@ const LeaderBoard = (state=initialState, action) => {
             return updateObject(state, {
                 board: action.data
             });
+        case actionTypes.POST_DATA:
+            return updateObject(state, {
+                board: state.board.concat(action.data)
+            });
         default:
             return state;
     }
